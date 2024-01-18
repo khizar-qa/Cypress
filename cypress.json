@@ -1,0 +1,11 @@
+{
+    "watchForFileChanges": true,
+    "responseTimeout": 60000,
+    "screenshotOnRunFailure": true,
+    "video": true,
+    "baseUrl": "https://opensource-demo.orangehrmlive.com",
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "code": true
+    }
+}

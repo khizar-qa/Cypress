@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Aug 16 03:34:30 PKT 2023","Wed Aug 16 03:34:41 PKT 2023","11364","","Test Logout Functionality","","","","should logout a user",""
+"passed","Wed Aug 16 03:33:43 PKT 2023","Wed Aug 16 03:34:15 PKT 2023","31638","","Test Login Functionality","","","","should login to the website",""
+"passed","Wed Aug 16 03:34:15 PKT 2023","Wed Aug 16 03:34:29 PKT 2023","14175","","Navigate to MyInfo and verify/update Date of Birth field","","","","should verify and update DOB field",""

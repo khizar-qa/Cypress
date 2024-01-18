@@ -1,0 +1,180 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-15T22:33:56.984Z",
+    "end": "2023-08-15T22:34:41.707Z",
+    "duration": 44723,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "beaba32a-fde2-43fb-9203-1fb633567618",
+      "title": "",
+      "fullFile": "cypress/integration/test-spec.js",
+      "file": "cypress/integration/test-spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4df88dd8-631a-4830-92d6-3b32c5e91003",
+          "title": "Test Login Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should login to the website",
+              "fullTitle": "Test Login Functionality should login to the website",
+              "timedOut": null,
+              "duration": 31629,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.fixture('example').then(function (data) {\n  this.data = data;\n  cy.login(this.data.username, this.data.password);\n  cy.get(_locators.default.elements.dashboard).contains('Dashboard');\n  cy.contains('Invalid credentials').should('not.exist');\n  cy.url().should('eq', 'https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index');\n});",
+              "err": {},
+              "uuid": "39d1bab9-b3f5-4eb9-9020-97e26832f18d",
+              "parentUUID": "4df88dd8-631a-4830-92d6-3b32c5e91003",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "39d1bab9-b3f5-4eb9-9020-97e26832f18d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 31629,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "044b4ab0-2f2c-4a21-a163-2eec54554b9d",
+          "title": "Navigate to MyInfo and verify/update Date of Birth field",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should verify and update DOB field",
+              "fullTitle": "Navigate to MyInfo and verify/update Date of Birth field should verify and update DOB field",
+              "timedOut": null,
+              "duration": 14173,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_locators.default.elements.myInfo).should('be.visible').click();\ncy.url().should('eq', 'https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/7');\ncy.get(_locators.default.elements.dob).should('have.length.greaterThan', 0);\ncy.get(_locators.default.elements.dob).should('be.visible').clear();\ncy.get(_locators.default.elements.dob).should('be.visible').type('2019-10-05');\ncy.get(_locators.default.elements.saveinfo).should('be.visible').click();\ncy.get(_locators.default.elements.dob).should('have.value', '2019-10-05');",
+              "err": {},
+              "uuid": "36f86721-43b2-402e-87e9-f4e9cf2364fe",
+              "parentUUID": "044b4ab0-2f2c-4a21-a163-2eec54554b9d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "36f86721-43b2-402e-87e9-f4e9cf2364fe"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14173,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "8fe3c3a7-3de9-4a2c-8575-7db4666c1586",
+          "title": "Test Logout Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should logout a user",
+              "fullTitle": "Test Logout Functionality should logout a user",
+              "timedOut": null,
+              "duration": 11352,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.logout();\ncy.url().should('eq', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.get(_locators.default.elements.loginheading).contains('Login');",
+              "err": {},
+              "uuid": "05de2edb-fe9c-4aa2-bad5-9b6f7da0574c",
+              "parentUUID": "8fe3c3a7-3de9-4a2c-8575-7db4666c1586",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "05de2edb-fe9c-4aa2-bad5-9b6f7da0574c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11352,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.2"
+    },
+    "marge": {
+      "options": {
+        "code": true
+      },
+      "version": "6.1.1"
+    }
+  }
+}
